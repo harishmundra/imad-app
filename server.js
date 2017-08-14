@@ -93,11 +93,11 @@ return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
-  res.send(createTemplate(articles.articleOne));
-});
+  res.sendfile(path.join(__dirname, 'ui', 'index.html'));
+ });
 
 app.get('/article-one', function(req, res){
-    res.sendfile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(articleOne));
 });
 
 app.get('/article-two', function(req, res){
