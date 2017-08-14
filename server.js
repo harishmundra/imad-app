@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne ={
+var articles = {
+articleOne :{
     title:"Article-One : Harish Mundra",
     heading:"Article-One",
     date:"14th August, 2017",
@@ -16,6 +17,34 @@ var articleOne ={
         <p>
             The acceleration in space, impressive as it is, might be less spectacular than the change taking place on the ground. Prime Minister Narendra Modi has initiated a transformation towards a new India in which historic burdens such as poverty and corruption have been eliminated, and inheritance ills like communalism and casteism are only bad memory. His mission has a calendar; the deadline is 2022, when India celebrates its 75th year of independence.
         </p>`
+            },
+            
+articleTwo : {
+    title:"Article-Two : Harish Mundra",
+    heading:"Article-Two",
+    date:"15th August, 2017",
+    content:`<p>
+            On 15 February this year, Isro placed 104 satellites into orbit using only a single launch of one vehicle, PSLV-C37. The video of the event, available easily enough on the net, shows the familiar zoom of a rocket entering space, and then little flicks chase one another into the deep distance until the mission is completed. Only three satellites were Indian; 96 were commissioned by two American companies, Planet Laks and Spire Global.
+        </p>
+        
+        <p>
+            The acceleration in space, impressive as it is, might be less spectacular than the change taking place on the ground. Prime Minister Narendra Modi has initiated a transformation towards a new India in which historic burdens such as poverty and corruption have been eliminated, and inheritance ills like communalism and casteism are only bad memory. His mission has a calendar; the deadline is 2022, when India celebrates its 75th year of independence.
+        </p>`
+},
+
+articleThree : {
+    title:"Article-Three : Harish Mundra",
+    heading:"Article-Three",
+    date:"16th August, 2017",
+    content:`<p>
+            On 15 February this year, Isro placed 104 satellites into orbit using only a single launch of one vehicle, PSLV-C37. The video of the event, available easily enough on the net, shows the familiar zoom of a rocket entering space, and then little flicks chase one another into the deep distance until the mission is completed. Only three satellites were Indian; 96 were commissioned by two American companies, Planet Laks and Spire Global.
+        </p>
+        
+        <p>
+            The acceleration in space, impressive as it is, might be less spectacular than the change taking place on the ground. Prime Minister Narendra Modi has initiated a transformation towards a new India in which historic burdens such as poverty and corruption have been eliminated, and inheritance ills like communalism and casteism are only bad memory. His mission has a calendar; the deadline is 2022, when India celebrates its 75th year of independence.
+        </p>`
+},
+
 };
 
 function createTemplate(data) {
@@ -64,7 +93,7 @@ return htmlTemplate;
 }
 
 app.get('/', function (req, res) {
-  res.send(createTemplate(articleOne));
+  res.send(createTemplate(articles.articleOne));
 });
 
 app.get('/article-one', function(req, res){
