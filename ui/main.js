@@ -8,5 +8,5 @@ element.innerHTML = "Changing the value of HTML from Java Script";
 // Move the image on click
 var img = document.getElementById('madi');
 img.onclick = function() {
-   img.style.marginleft = '1000px';
+   img.style.margin.left = '1000px';
 };
