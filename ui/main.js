@@ -35,7 +35,7 @@ console.log('Loaded!');
   
   button.onclick = function(){
       
-      // Make a request to the counter increment code
+      // Create  a requet
       
       var request = new XMLHttpRequest();
       
@@ -56,4 +56,6 @@ console.log('Loaded!');
           // else Leave it for now
       };
 
+      request.open('GET', 'http://harishmundra.imad.hasura-app.io/counter', true);
+      request.send(null);
   };
