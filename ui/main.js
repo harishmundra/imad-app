@@ -31,17 +31,29 @@ console.log('Loaded!');
 
   
   var button = document.getElementById('counter');
-  var counter = 0;
+//  var counter = 0;
   
   button.onclick = function(){
       
       // Make a request to the counter increment code
       
+      var request = new XMLHttpRequest();
+      
       // Capture the response and store it in a variable
       
-      // Render the output in correct span
-      counter++;
-      var span = document.getElementById('count');
-      span.innerHTML = counter.toString();
-      
+      request.onreadystatechange = function(){
+          
+          if (request.readyState === XMLHttpReques.DONE){
+              if (request.status === 200){
+                  var counter = request.responseText;
+                  var span = document.getElementById('count');
+                  span.innerHTML = counter.toString();
+                  
+              }
+              //Take some action
+          }
+          
+          // else Leave it for now
+      };
+
   };
