@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-/*
+
 // Changing the value of HTML text displayed on the screen
 
  var element = document.getElementById('main-text');
@@ -19,12 +19,15 @@ console.log('Loaded!');
  var interval = setInterval(moveRight,500);
   };
   
- WILL BE WRITING ANOTHER PIECE OF CODE HERE 
+// WILL BE WRITING ANOTHER PIECE OF CODE HERE 
   
-  */
+  
   
   
   // Code to call the Counter iincrement from server.js
+  
+  
+
   
   var button = document.getElementById('counter');
   var counter = 0;
