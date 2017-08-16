@@ -56,6 +56,8 @@ console.log('Loaded!');
           // else Leave it for now
       };
 
+    // Make a request
+    
       request.open('GET', 'http://harishmundra.imad.hasura-app.io/counter', true);
       request.send(null);
   };
