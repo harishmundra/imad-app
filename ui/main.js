@@ -72,7 +72,7 @@ console.log('Loaded!');
       // make a request to the server with name
       var nameInput = document.getElementById('name');
       var name1 = nameInput.value;
-       var request = new XMLHttpRequest();
+      var request = new XMLHttpRequest();
       
       // Capture the response and store it in a variable
       
