@@ -65,7 +65,7 @@ console.log('Loaded!');
   // Get name from HTML and submit to server
   
   var nameInput = document.getElementById('name');
-  var name = nameInput.value;
+  var name1 = nameInput.value;
   var submit = document.getElementById('submit_btn');
   submit.onclick = function(){
       // make a request to the server with name
