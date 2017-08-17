@@ -67,9 +67,36 @@ console.log('Loaded!');
   var nameInput = document.getElementById('name');
   var name1 = nameInput.value;
   var submit = document.getElementById('submit_btn');
+ 
   submit.onclick = function(){
       // make a request to the server with name
       
+       var request = new XMLHttpRequest();
+      
+      // Capture the response and store it in a variable
+      
+      request.onreadystatechange = function(){
+          
+          if (request.readyState === XMLHttpRequest.DONE){
+              if (request.status === 200){
+                  var list = request.responseText;
+                  var ul = document.getElementById('namelist');
+                  ul.innerHTML = list;
+                  
+              }
+              //Take some action
+          }
+          
+          // else Leave it for now
+      };
+
+    // Make a request
+    
+      request.open('GET', 'http://harishmundra.imad.hasura-app.io/counter', true);
+      request.send(null);
+      
+      
+/*      Code re-written above
       //Capture and render the name list
       var names = ['name1', 'name2', 'name3', 'name4'];
       var list = '';
@@ -80,4 +107,6 @@ console.log('Loaded!');
       
       var ul = document.getElementById('namelist');
       ul.innerHTML = list;
+*/      
+
   };
