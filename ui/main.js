@@ -92,7 +92,7 @@ console.log('Loaded!');
 
     // Make a request
     
-      request.open('GET', 'http://harishmundra.imad.hasura-app.io/submit-name', true);
+      request.open('GET', 'http://harishmundra.imad.hasura-app.io/submit-name?name= ' + name1, true);
       request.send(ul);
       
       
