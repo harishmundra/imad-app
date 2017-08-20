@@ -14,6 +14,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 /*
+Removing the content from HTML since now getting the same from database
 
 var articles = {
 'article-one' :{
